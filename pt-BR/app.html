@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Photo Log | Das fotos da obra ao relatório PDF</title>
+<meta name="description" content="Tire fotos da obra com quadro e gere um relatório PDF na hora. Compra única, sem assinatura, sem conta. Funciona offline.">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Helvetica Neue", "Segoe UI", sans-serif; line-height: 1.65; color: #1a1a1a; background: #f6f6f3; margin: 0; }
+  a { color: #1f5fd0; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  .topnav { font-size: 0.9rem; padding: 12px 0 0; }
+  .topnav a { margin-right: 16px; color: #fff; }
+  .lang { font-size: 0.85rem; margin: 4px 0 0; }
+  .lang a, .lang b { margin-right: 12px; white-space: nowrap; color: #fff; }
+  .hero { background: linear-gradient(165deg, #3b7bf0 0%, #1f55d6 45%, #0f2f96 100%); color: #fff; padding-bottom: 40px; }
+  .hero-in { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding-top: 28px; }
+  .hero-text { flex: 1 1 340px; }
+  .hero-img { flex: 0 1 300px; margin: 0 auto; }
+  .hero-img img { width: 100%; height: auto; border-radius: 18px; box-shadow: 0 18px 50px rgba(0, 0, 40, 0.4); display: block; }
+  .appname { display: flex; align-items: center; gap: 14px; }
+  .appname img { width: 72px; height: 72px; border-radius: 16px; }
+  .appname b { font-size: 1.15rem; line-height: 1.4; }
+  h1 { font-size: 2.2rem; line-height: 1.25; margin: 22px 0 10px; }
+  .lead { font-size: 1.08rem; color: #e3ecff; margin: 0 0 22px; }
+  .store { display: inline-block; background: #fff; color: #123a9c; font-weight: 700; font-size: 1.05rem; text-decoration: none; border-radius: 12px; padding: 12px 26px; box-shadow: 0 6px 18px rgba(0, 0, 40, 0.3); }
+  .tags { margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags li { border: 1px solid rgba(255, 255, 255, 0.55); border-radius: 999px; padding: 2px 14px; font-size: 0.9rem; }
+  h2 { font-size: 1.5rem; margin: 56px 0 6px; text-align: center; }
+  .h2sub { text-align: center; color: #555; margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+  .card { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 16px; }
+  .card img { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .card h3 { font-size: 1.1rem; margin: 14px 0 4px; }
+  .card p { margin: 0; color: #333; font-size: 0.97rem; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .plan { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 18px 20px; }
+  .plan.pro { border: 2px solid #1f5fd0; }
+  .plan h3 { margin: 0 0 6px; font-size: 1.15rem; }
+  .plan ul { margin: 6px 0 0; padding-left: 1.3em; }
+  .plan li { margin: 3px 0; }
+  .safe { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .safe ul { flex: 1 1 320px; margin: 0; padding-left: 1.3em; }
+  .safe img { flex: 0 1 220px; width: 220px; max-width: 100%; height: auto; border-radius: 10px; border: 1px solid #ddd; margin: 0 auto; }
+  .note { background: #fff8e1; border: 1px solid #e6cf7a; border-radius: 10px; padding: 12px 16px; margin: 28px 0 0; font-size: 0.94rem; }
+  .cta { text-align: center; margin: 48px 0 0; }
+  .cta .store { background: #1f5fd0; color: #fff; }
+  footer { text-align: center; font-size: 0.9rem; color: #555; padding: 40px 0 56px; }
+  footer a { margin: 0 10px; }
+  @media (max-width: 560px) { h1 { font-size: 1.7rem; } }
+</style>
+</head>
+<body>
+<div class="hero">
+<div class="wrap">
+<div class="topnav"><a href="app.html">O app</a><a href="index.html">Suporte</a><a href="privacy.html">Privacidade</a></div>
+<p class="lang"><a href="../app.html">日本語</a><a href="../en/app.html">English</a><a href="../ko/app.html">한국어</a><a href="../de/app.html">Deutsch</a><a href="../fr/app.html">Français</a><a href="../es/app.html">Español</a><a href="../zh-Hant/app.html">繁體中文</a><b>Português</b><a href="../vi/app.html">Tiếng Việt</a></p>
+<div class="hero-in">
+<div class="hero-text">
+<div class="appname"><img src="../img/icon.png" alt="Ícone do app"><b>Site Photo Log</b></div>
+<h1>Das fotos da obra ao relatório PDF, ali mesmo.</h1>
+<p class="lead">Fotografe, organize e monte o relatório em um único iPhone antes de sair da obra. Feito para construção e igualmente útil em reformas, inspeções, manutenção e vistorias.</p>
+<a class="store" href="https://apps.apple.com/app/id6837197071">Ver na App Store</a>
+<ul class="tags"><li>Compra única</li><li>Sem assinatura</li><li>Sem conta</li><li>Funciona offline</li></ul>
+</div>
+<div class="hero-img"><img src="../img/promo-pt-BR-01-camera.jpg" alt="Quadro em cada foto" width="480" height="1041"></div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+
+<h2>O que ele faz</h2>
+<p class="h2sub">Da primeira foto ao relatório pronto, em um só app.</p>
+<div class="grid">
+<div class="card"><img src="../img/promo-pt-BR-01-camera.jpg" alt="Quadro em cada foto" loading="lazy" width="480" height="1041"><h3>Quadro em cada foto</h3><p>Cada foto recebe um pequeno quadro com o nome da obra, a data e observações. Meses depois, a imagem ainda diz o que mostra. A direção da bússola também pode ser registrada.</p></div>
+<div class="card"><img src="../img/promo-pt-BR-02-report-cover.jpg" alt="Relatórios PDF na hora" loading="lazy" width="480" height="1041"><h3>Relatórios PDF na hora</h3><p>Crie um relatório com capa em um toque e envie por e-mail ou imprima. Papel A4 ou Carta, de uma a três fotos por página.</p></div>
+<div class="card"><img src="../img/promo-pt-BR-03-project.jpg" alt="A lista avisa as fotos que faltam" loading="lazy" width="480" height="1041"><h3>A lista avisa as fotos que faltam</h3><p>Liste as fotos necessárias (antes, em andamento, concluído) e o app avisa quais ainda faltam.</p></div>
+<div class="card"><img src="../img/promo-pt-BR-04-shotlist.jpg" alt="Escolha o item e fotografe" loading="lazy" width="480" height="1041"><h3>Escolha o item e fotografe</h3><p>Escolha um item da lista na tela da câmera e cada foto fica guardada nele. Depois, deslize para a direita para manter a foto e para a esquerda para descartar.</p></div>
+</div>
+
+<h2>Grátis e Pro</h2>
+<p class="h2sub">A versão grátis já vai da foto ao relatório PDF.</p>
+<div class="two">
+<div class="plan">
+<h3>Grátis</h3>
+<p style="margin:6px 0 0">As fotos, o quadro, as listas de fotos, a bússola, a triagem, os relatórios em PDF, a impressão e os backups funcionam também na versão gratuita.</p>
+<ul>
+<li>Uma obra</li>
+<li>Os relatórios PDF levam marca d’água</li>
+</ul>
+</div>
+<div class="plan pro">
+<h3>Pro (compra única, sem assinatura)</h3>
+<ul>
+<li>Obras ilimitadas</li>
+<li>Sem marca d’água nos relatórios em PDF</li>
+<li>Renomear e adicionar campos do quadro</li>
+<li>Nome e logotipo da empresa na capa</li>
+<li>Marcações na foto (seta, círculo, texto) e foto de detalhe</li>
+<li>Frases salvas para as descrições</li>
+<li>Exportar para Excel e Word</li>
+<li>Salvar obras como modelos</li>
+<li>Título e campos da capa personalizados, campos de assinatura</li>
+<li>Descrições para preencher (basta digitar um número ou escolher)</li>
+<li>Importar planilhas de preparação (cadastro em lote pelo Excel ou CSV)</li>
+</ul>
+<p class="h2sub" style="text-align:left;margin:10px 0 0">Você paga uma vez só. Veja o preço do seu país na App Store.</p>
+</div>
+</div>
+
+<h2>Tratamento das fotos</h2>
+<p class="h2sub">As fotos da obra são informações dos seus clientes.</p>
+<div class="safe">
+<ul>
+<li>Este app não envia fotos nem dados de obra para lugar nenhum. Ele só se conecta à rede para comprar ou restaurar a versão Pro (App Store da Apple).</li>
+<li>Não existe servidor para este app. O desenvolvedor não consegue ver suas fotos nem os dados das suas obras.</li>
+<li>Não há conta, portanto nenhum e-mail ou senha é coletado.</li>
+<li>Não há anúncios nem rastreamento de uso.</li>
+<li>As fotos só saem do app quando você mesmo as compartilha, imprime ou faz backup.</li>
+</ul>
+<img src="../img/promo-pt-BR-06-privacy.jpg" alt="Tratamento das fotos" loading="lazy" width="480" height="1041">
+</div>
+<p style="text-align:center;margin-top:10px"><a href="privacy.html">Ler a política de privacidade</a></p>
+
+<div class="note"><b>Atenção</b>&nbsp; O quadro deste app é uma imagem simples sobreposta à foto. Ele não detecta adulteração e não é certificado por nenhuma norma oficial. Apagar o app também apaga as fotos que estão nele: mantenha um backup (Backup do iCloud, cópia no app Fotos ou backup por obra).</div>
+
+<div class="cta"><a class="store" href="https://apps.apple.com/app/id6837197071">Ver na App Store</a></div>
+
+</div>
+
+<footer>
+<div><a href="index.html">Suporte</a><a href="privacy.html">Privacidade</a></div>
+<p>Contato: <a href="mailto:blue_pitohui@yahoo.co.jp">blue_pitohui@yahoo.co.jp</a></p>
+<p>iPhone e App Store são marcas comerciais da Apple Inc.</p>
+</footer>
+</body>
+</html>

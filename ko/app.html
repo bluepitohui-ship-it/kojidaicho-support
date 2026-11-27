@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Photo Log | 현장 사진을 PDF 보고서로</title>
+<meta name="description" content="사진 보드를 넣은 현장 사진을 찍고 그 자리에서 PDF 보고서로 만듭니다. 한 번 구매, 구독 없음, 계정 없음. 오프라인에서도 사용할 수 있습니다.">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Helvetica Neue", "Segoe UI", sans-serif; line-height: 1.8; color: #1a1a1a; background: #f6f6f3; margin: 0; }
+  a { color: #1f5fd0; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  .topnav { font-size: 0.9rem; padding: 12px 0 0; }
+  .topnav a { margin-right: 16px; color: #fff; }
+  .lang { font-size: 0.85rem; margin: 4px 0 0; }
+  .lang a, .lang b { margin-right: 12px; white-space: nowrap; color: #fff; }
+  .hero { background: linear-gradient(165deg, #3b7bf0 0%, #1f55d6 45%, #0f2f96 100%); color: #fff; padding-bottom: 40px; }
+  .hero-in { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding-top: 28px; }
+  .hero-text { flex: 1 1 340px; }
+  .hero-img { flex: 0 1 300px; margin: 0 auto; }
+  .hero-img img { width: 100%; height: auto; border-radius: 18px; box-shadow: 0 18px 50px rgba(0, 0, 40, 0.4); display: block; }
+  .appname { display: flex; align-items: center; gap: 14px; }
+  .appname img { width: 72px; height: 72px; border-radius: 16px; }
+  .appname b { font-size: 1.15rem; line-height: 1.4; }
+  h1 { font-size: 2.2rem; line-height: 1.25; margin: 22px 0 10px; }
+  .lead { font-size: 1.08rem; color: #e3ecff; margin: 0 0 22px; }
+  .store { display: inline-block; background: #fff; color: #123a9c; font-weight: 700; font-size: 1.05rem; text-decoration: none; border-radius: 12px; padding: 12px 26px; box-shadow: 0 6px 18px rgba(0, 0, 40, 0.3); }
+  .tags { margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags li { border: 1px solid rgba(255, 255, 255, 0.55); border-radius: 999px; padding: 2px 14px; font-size: 0.9rem; }
+  h2 { font-size: 1.5rem; margin: 56px 0 6px; text-align: center; }
+  .h2sub { text-align: center; color: #555; margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+  .card { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 16px; }
+  .card img { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .card h3 { font-size: 1.1rem; margin: 14px 0 4px; }
+  .card p { margin: 0; color: #333; font-size: 0.97rem; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .plan { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 18px 20px; }
+  .plan.pro { border: 2px solid #1f5fd0; }
+  .plan h3 { margin: 0 0 6px; font-size: 1.15rem; }
+  .plan ul { margin: 6px 0 0; padding-left: 1.3em; }
+  .plan li { margin: 3px 0; }
+  .safe { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .safe ul { flex: 1 1 320px; margin: 0; padding-left: 1.3em; }
+  .safe img { flex: 0 1 220px; width: 220px; max-width: 100%; height: auto; border-radius: 10px; border: 1px solid #ddd; margin: 0 auto; }
+  .note { background: #fff8e1; border: 1px solid #e6cf7a; border-radius: 10px; padding: 12px 16px; margin: 28px 0 0; font-size: 0.94rem; }
+  .cta { text-align: center; margin: 48px 0 0; }
+  .cta .store { background: #1f5fd0; color: #fff; }
+  footer { text-align: center; font-size: 0.9rem; color: #555; padding: 40px 0 56px; }
+  footer a { margin: 0 10px; }
+  @media (max-width: 560px) { h1 { font-size: 1.7rem; } }
+</style>
+</head>
+<body>
+<div class="hero">
+<div class="wrap">
+<div class="topnav"><a href="app.html">앱 소개</a><a href="index.html">지원</a><a href="privacy.html">개인정보 처리방침</a></div>
+<p class="lang"><a href="../app.html">日本語</a><a href="../en/app.html">English</a><b>한국어</b><a href="../de/app.html">Deutsch</a><a href="../fr/app.html">Français</a><a href="../es/app.html">Español</a><a href="../zh-Hant/app.html">繁體中文</a><a href="../pt-BR/app.html">Português</a><a href="../vi/app.html">Tiếng Việt</a></p>
+<div class="hero-in">
+<div class="hero-text">
+<div class="appname"><img src="../img/icon.png" alt="앱 아이콘"><b>Site Photo Log</b></div>
+<h1>현장 사진을 그 자리에서 PDF 보고서로.</h1>
+<p class="lead">촬영하고, 고르고, 보고서로 만드는 일을 iPhone 한 대로 현장을 떠나기 전에 끝냅니다. 공사는 물론 리모델링, 점검, 유지보수, 조사 기록에도 쓸 수 있습니다.</p>
+<a class="store" href="https://apps.apple.com/app/id6837197071">App Store에서 보기</a>
+<ul class="tags"><li>한 번 구매</li><li>구독 없음</li><li>계정 없음</li><li>오프라인에서도 사용</li></ul>
+</div>
+<div class="hero-img"><img src="../img/promo-ko-01-camera.jpg" alt="사진 보드를 넣어 바로 촬영" width="480" height="1041"></div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+
+<h2>할 수 있는 일</h2>
+<p class="h2sub">첫 사진부터 완성된 보고서까지, 앱 하나로.</p>
+<div class="grid">
+<div class="card"><img src="../img/promo-ko-01-camera.jpg" alt="사진 보드를 넣어 바로 촬영" loading="lazy" width="480" height="1041"><h3>사진 보드를 넣어 바로 촬영</h3><p>공사명, 날짜, 메모가 적힌 작은 보드가 사진마다 들어갑니다. 몇 달 뒤에 봐도 무슨 사진인지 알 수 있습니다. 나침반 방위도 함께 기록할 수 있습니다.</p></div>
+<div class="card"><img src="../img/promo-ko-02-report-cover.jpg" alt="현장에서 바로 PDF 보고서" loading="lazy" width="480" height="1041"><h3>현장에서 바로 PDF 보고서</h3><p>표지가 있는 보고서를 한 번의 탭으로 만들고, 메일로 보내거나 인쇄할 수 있습니다. 용지는 A4와 레터, 한 쪽에 사진 1~3장을 고를 수 있습니다.</p></div>
+<div class="card"><img src="../img/promo-ko-03-project.jpg" alt="빠진 사진을 알려 주는 촬영 목록" loading="lazy" width="480" height="1041"><h3>빠진 사진을 알려 주는 촬영 목록</h3><p>시공 전, 시공 중, 완료처럼 찍어야 할 사진을 미리 적어 두면, 아직 찍지 않은 항목을 앱이 알려 줍니다.</p></div>
+<div class="card"><img src="../img/promo-ko-04-shotlist.jpg" alt="항목을 고르고 촬영" loading="lazy" width="480" height="1041"><h3>항목을 고르고 촬영</h3><p>촬영 화면에서 목록의 항목을 고르면 사진이 그 항목에 정리됩니다. 촬영 후에는 오른쪽으로 밀면 사용, 왼쪽으로 밀면 제외입니다.</p></div>
+</div>
+
+<h2>무료와 Pro</h2>
+<p class="h2sub">무료 버전만으로도 촬영부터 PDF 보고서까지 쓸 수 있습니다.</p>
+<div class="two">
+<div class="plan">
+<h3>무료</h3>
+<p style="margin:6px 0 0">촬영, 보드, 촬영 목록, 방위 가이드, 분류, 대장 PDF, 인쇄, 백업은 무료 버전에서도 그대로 쓸 수 있습니다.</p>
+<ul>
+<li>공사 1건</li>
+<li>PDF 보고서에 워터마크가 들어갑니다</li>
+</ul>
+</div>
+<div class="plan pro">
+<h3>Pro(한 번 구매, 구독 없음)</h3>
+<ul>
+<li>공사를 몇 건이든 등록</li>
+<li>대장 PDF의 워터마크 제거</li>
+<li>보드 항목 바꾸기·추가</li>
+<li>표지에 회사명·로고 넣기</li>
+<li>사진에 표시하기(화살표·원·글자)와 부분 확대 사진</li>
+<li>상용구 등록</li>
+<li>엑셀·워드로 내보내기</li>
+<li>공사 서식 저장</li>
+<li>표지 제목·항목 변경, 결재란</li>
+<li>빈칸 채우기식 설명(숫자나 선택만 입력)</li>
+<li>설정 시트 불러오기(엑셀·CSV로 한꺼번에 등록)</li>
+</ul>
+<p class="h2sub" style="text-align:left;margin:10px 0 0">결제는 한 번뿐입니다. 가격은 App Store에서 확인해 주세요.</p>
+</div>
+</div>
+
+<h2>사진 취급 안내</h2>
+<p class="h2sub">현장 사진은 고객의 소중한 정보입니다.</p>
+<div class="safe">
+<ul>
+<li>이 앱은 사진이나 공사 정보를 앱 밖으로 보내지 않습니다. 통신하는 것은 Pro 버전을 구입하거나 복원할 때(Apple의 App Store)뿐입니다.</li>
+<li>이 앱을 위한 서버는 없습니다. 개발자도 사용자의 사진이나 공사 정보를 볼 수 없습니다.</li>
+<li>계정 등록이 없으므로 이메일 주소나 암호를 받지 않습니다.</li>
+<li>광고나 사용 현황을 측정하는 장치를 넣지 않았습니다.</li>
+<li>사진이 밖으로 나가는 것은 사용자가 직접 공유·인쇄·백업을 했을 때뿐입니다.</li>
+</ul>
+<img src="../img/promo-ko-06-privacy.jpg" alt="사진 취급 안내" loading="lazy" width="480" height="1041">
+</div>
+<p style="text-align:center;margin-top:10px"><a href="privacy.html">개인정보 처리방침 읽기</a></p>
+
+<div class="note"><b>주의</b>&nbsp; 이 앱의 보드는 사진에 합성하는 단순한 이미지입니다. 위변조 감지 기능이 없으며 어떤 공식 표준의 인증도 받지 않았습니다. 앱을 삭제하면 앱 안의 사진도 삭제되므로 백업해 두세요(iCloud 백업, 사진 앱에 사본 저장, 공사별 백업).</div>
+
+<div class="cta"><a class="store" href="https://apps.apple.com/app/id6837197071">App Store에서 보기</a></div>
+
+</div>
+
+<footer>
+<div><a href="index.html">지원</a><a href="privacy.html">개인정보 처리방침</a></div>
+<p>문의: <a href="mailto:blue_pitohui@yahoo.co.jp">blue_pitohui@yahoo.co.jp</a></p>
+<p>iPhone 및 App Store는 Apple Inc.의 상표입니다.</p>
+</footer>
+</body>
+</html>

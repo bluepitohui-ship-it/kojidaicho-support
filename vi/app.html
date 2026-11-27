@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Photo Log | Từ ảnh công trình đến báo cáo PDF</title>
+<meta name="description" content="Chụp ảnh công trình có bảng ghi và tạo báo cáo PDF ngay tại chỗ. Mua một lần, không thuê bao, không cần tài khoản. Dùng được khi không có mạng.">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Helvetica Neue", "Segoe UI", sans-serif; line-height: 1.65; color: #1a1a1a; background: #f6f6f3; margin: 0; }
+  a { color: #1f5fd0; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  .topnav { font-size: 0.9rem; padding: 12px 0 0; }
+  .topnav a { margin-right: 16px; color: #fff; }
+  .lang { font-size: 0.85rem; margin: 4px 0 0; }
+  .lang a, .lang b { margin-right: 12px; white-space: nowrap; color: #fff; }
+  .hero { background: linear-gradient(165deg, #3b7bf0 0%, #1f55d6 45%, #0f2f96 100%); color: #fff; padding-bottom: 40px; }
+  .hero-in { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding-top: 28px; }
+  .hero-text { flex: 1 1 340px; }
+  .hero-img { flex: 0 1 300px; margin: 0 auto; }
+  .hero-img img { width: 100%; height: auto; border-radius: 18px; box-shadow: 0 18px 50px rgba(0, 0, 40, 0.4); display: block; }
+  .appname { display: flex; align-items: center; gap: 14px; }
+  .appname img { width: 72px; height: 72px; border-radius: 16px; }
+  .appname b { font-size: 1.15rem; line-height: 1.4; }
+  h1 { font-size: 2.2rem; line-height: 1.25; margin: 22px 0 10px; }
+  .lead { font-size: 1.08rem; color: #e3ecff; margin: 0 0 22px; }
+  .store { display: inline-block; background: #fff; color: #123a9c; font-weight: 700; font-size: 1.05rem; text-decoration: none; border-radius: 12px; padding: 12px 26px; box-shadow: 0 6px 18px rgba(0, 0, 40, 0.3); }
+  .tags { margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags li { border: 1px solid rgba(255, 255, 255, 0.55); border-radius: 999px; padding: 2px 14px; font-size: 0.9rem; }
+  h2 { font-size: 1.5rem; margin: 56px 0 6px; text-align: center; }
+  .h2sub { text-align: center; color: #555; margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+  .card { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 16px; }
+  .card img { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .card h3 { font-size: 1.1rem; margin: 14px 0 4px; }
+  .card p { margin: 0; color: #333; font-size: 0.97rem; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .plan { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 18px 20px; }
+  .plan.pro { border: 2px solid #1f5fd0; }
+  .plan h3 { margin: 0 0 6px; font-size: 1.15rem; }
+  .plan ul { margin: 6px 0 0; padding-left: 1.3em; }
+  .plan li { margin: 3px 0; }
+  .safe { background: #fff; border: 1px solid #ddd; border-radius: 14px; padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .safe ul { flex: 1 1 320px; margin: 0; padding-left: 1.3em; }
+  .safe img { flex: 0 1 220px; width: 220px; max-width: 100%; height: auto; border-radius: 10px; border: 1px solid #ddd; margin: 0 auto; }
+  .note { background: #fff8e1; border: 1px solid #e6cf7a; border-radius: 10px; padding: 12px 16px; margin: 28px 0 0; font-size: 0.94rem; }
+  .cta { text-align: center; margin: 48px 0 0; }
+  .cta .store { background: #1f5fd0; color: #fff; }
+  footer { text-align: center; font-size: 0.9rem; color: #555; padding: 40px 0 56px; }
+  footer a { margin: 0 10px; }
+  @media (max-width: 560px) { h1 { font-size: 1.7rem; } }
+</style>
+</head>
+<body>
+<div class="hero">
+<div class="wrap">
+<div class="topnav"><a href="app.html">Giới thiệu</a><a href="index.html">Hỗ trợ</a><a href="privacy.html">Quyền riêng tư</a></div>
+<p class="lang"><a href="../app.html">日本語</a><a href="../en/app.html">English</a><a href="../ko/app.html">한국어</a><a href="../de/app.html">Deutsch</a><a href="../fr/app.html">Français</a><a href="../es/app.html">Español</a><a href="../zh-Hant/app.html">繁體中文</a><a href="../pt-BR/app.html">Português</a><b>Tiếng Việt</b></p>
+<div class="hero-in">
+<div class="hero-text">
+<div class="appname"><img src="../img/icon.png" alt="Biểu tượng ứng dụng"><b>Site Photo Log</b></div>
+<h1>Từ ảnh công trình đến báo cáo PDF, ngay tại chỗ.</h1>
+<p class="lead">Chụp, chọn lọc và tạo báo cáo chỉ trên một chiếc iPhone, trước khi rời công trường. Làm cho xây dựng, và cũng tiện cho sửa chữa, kiểm tra, bảo trì và khảo sát.</p>
+<a class="store" href="https://apps.apple.com/app/id6837197071">Xem trên App Store</a>
+<ul class="tags"><li>Mua một lần</li><li>Không thuê bao</li><li>Không cần tài khoản</li><li>Dùng được khi không có mạng</li></ul>
+</div>
+<div class="hero-img"><img src="../img/promo-vi-01-camera.jpg" alt="Bảng ghi trên từng bức ảnh" width="480" height="1041"></div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+
+<h2>Ứng dụng làm được gì</h2>
+<p class="h2sub">Từ tấm ảnh đầu tiên đến bản báo cáo hoàn chỉnh, trong một ứng dụng.</p>
+<div class="grid">
+<div class="card"><img src="../img/promo-vi-01-camera.jpg" alt="Bảng ghi trên từng bức ảnh" loading="lazy" width="480" height="1041"><h3>Bảng ghi trên từng bức ảnh</h3><p>Mỗi tấm ảnh có một bảng nhỏ ghi tên công trình, ngày và ghi chú. Nhiều tháng sau, tấm ảnh vẫn cho biết nó chụp gì. Có thể lưu cả hướng la bàn.</p></div>
+<div class="card"><img src="../img/promo-vi-02-report-cover.jpg" alt="Báo cáo PDF ngay tại chỗ" loading="lazy" width="480" height="1041"><h3>Báo cáo PDF ngay tại chỗ</h3><p>Tạo báo cáo có trang bìa chỉ bằng một lần chạm, rồi gửi email hoặc in. Giấy A4 hoặc Letter, mỗi trang từ một đến ba ảnh.</p></div>
+<div class="card"><img src="../img/promo-vi-03-project.jpg" alt="Danh sách nhắc ảnh còn thiếu" loading="lazy" width="480" height="1041"><h3>Danh sách nhắc ảnh còn thiếu</h3><p>Liệt kê những ảnh cần chụp (trước, đang làm, hoàn thành) và ứng dụng sẽ báo ảnh nào còn thiếu.</p></div>
+<div class="card"><img src="../img/promo-vi-04-shotlist.jpg" alt="Chọn mục rồi chụp" loading="lazy" width="480" height="1041"><h3>Chọn mục rồi chụp</h3><p>Chọn một mục trong danh sách ở màn hình chụp, mỗi ảnh sẽ được xếp vào mục đó. Sau đó, vuốt sang phải để giữ ảnh, sang trái để bỏ qua.</p></div>
+</div>
+
+<h2>Miễn phí và Pro</h2>
+<p class="h2sub">Bản miễn phí đã đủ từ chụp ảnh đến báo cáo PDF.</p>
+<div class="two">
+<div class="plan">
+<h3>Miễn phí</h3>
+<p style="margin:6px 0 0">Chụp ảnh, bảng, danh sách ảnh, la bàn, phân loại, báo cáo PDF, in và sao lưu đều dùng được ở bản miễn phí.</p>
+<ul>
+<li>Một công trình</li>
+<li>Báo cáo PDF có dấu mờ</li>
+</ul>
+</div>
+<div class="plan pro">
+<h3>Pro (mua một lần, không thuê bao)</h3>
+<ul>
+<li>Không giới hạn số công trình</li>
+<li>Báo cáo PDF không có dấu mờ</li>
+<li>Đổi tên và thêm mục trên bảng</li>
+<li>Tên và logo công ty trên trang bìa</li>
+<li>Ghi chú lên ảnh (mũi tên, vòng tròn, chữ) và ảnh chi tiết</li>
+<li>Lưu câu mẫu</li>
+<li>Xuất ra Excel và Word</li>
+<li>Lưu công trình làm mẫu</li>
+<li>Tùy chỉnh tiêu đề và các mục trang bìa, ô ký duyệt</li>
+<li>Mô tả dạng điền chỗ trống (chỉ cần nhập số hoặc chọn)</li>
+<li>Nhập bảng thiết lập (đăng ký hàng loạt từ Excel hoặc CSV)</li>
+</ul>
+<p class="h2sub" style="text-align:left;margin:10px 0 0">Bạn chỉ trả tiền một lần. Xem giá ở nước bạn trên App Store.</p>
+</div>
+</div>
+
+<h2>Cách xử lý ảnh</h2>
+<p class="h2sub">Ảnh công trình là thông tin của khách hàng.</p>
+<div class="safe">
+<ul>
+<li>Ứng dụng này không gửi ảnh hay thông tin công trình đi bất cứ đâu. Ứng dụng chỉ kết nối mạng khi mua hoặc khôi phục bản Pro (App Store của Apple).</li>
+<li>Ứng dụng này không có máy chủ. Nhà phát triển không thể xem ảnh hay thông tin công trình của bạn.</li>
+<li>Không cần tài khoản, nên không thu thập địa chỉ email hay mật khẩu.</li>
+<li>Không có quảng cáo và không theo dõi việc sử dụng.</li>
+<li>Ảnh chỉ rời khỏi ứng dụng khi chính bạn chia sẻ, in hoặc sao lưu.</li>
+</ul>
+<img src="../img/promo-vi-06-privacy.jpg" alt="Cách xử lý ảnh" loading="lazy" width="480" height="1041">
+</div>
+<p style="text-align:center;margin-top:10px"><a href="privacy.html">Đọc chính sách quyền riêng tư</a></p>
+
+<div class="note"><b>Lưu ý</b>&nbsp; Bảng trong ứng dụng này là hình ảnh đơn giản ghép vào ảnh chụp. Bảng không có chức năng phát hiện chỉnh sửa và không được chứng nhận theo bất kỳ tiêu chuẩn chính thức nào. Xóa ứng dụng cũng xóa các ảnh bên trong, vì vậy hãy sao lưu (Sao lưu iCloud, bản sao trong ứng dụng Ảnh hoặc sao lưu theo công trình).</div>
+
+<div class="cta"><a class="store" href="https://apps.apple.com/app/id6837197071">Xem trên App Store</a></div>
+
+</div>
+
+<footer>
+<div><a href="index.html">Hỗ trợ</a><a href="privacy.html">Quyền riêng tư</a></div>
+<p>Liên hệ: <a href="mailto:blue_pitohui@yahoo.co.jp">blue_pitohui@yahoo.co.jp</a></p>
+<p>iPhone và App Store là nhãn hiệu của Apple Inc.</p>
+</footer>
+</body>
+</html>
